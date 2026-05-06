@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My New Hugo Project</title>
-    <link>https://example.org/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on My New Hugo Project</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proyek Video Makrifat 01</title>
-      <link>https://example.org/posts/pengolahan-video-01/</link>
+      <link>http://localhost:1313/posts/pengolahan-video-01/</link>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/pengolahan-video-01/</guid>
+      <guid>http://localhost:1313/posts/pengolahan-video-01/</guid>
       <description>&lt;p&gt;Proses pengolahan video menggunakan FFmpeg Engine telah selesai.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sistem Otomasi Lab</title>
-      <link>https://example.org/posts/sistem-otomasi/</link>
+      <link>http://localhost:1313/posts/sistem-otomasi/</link>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/sistem-otomasi/</guid>
+      <guid>http://localhost:1313/posts/sistem-otomasi/</guid>
       <description>&lt;p&gt;Laporan harian sistem otomatisasi Indramayu Club.&lt;/p&gt;</description>
     </item>
   </channel>
