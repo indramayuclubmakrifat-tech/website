@@ -3,7 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:8080/</loc>
-    <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-06T20:11:43+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-8/</loc>
+    <lastmod>2026-05-06T20:11:43+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-10/</loc>
+    <lastmod>2026-05-06T20:07:03+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-9/</loc>
+    <lastmod>2026-05-06T20:07:03+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-1/</loc>
+    <lastmod>2026-05-06T20:07:02+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-2/</loc>
+    <lastmod>2026-05-06T20:07:02+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-3/</loc>
+    <lastmod>2026-05-06T20:07:02+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-4/</loc>
+    <lastmod>2026-05-06T20:07:02+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-5/</loc>
+    <lastmod>2026-05-06T20:07:02+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-6/</loc>
+    <lastmod>2026-05-06T20:07:02+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8080/nur-7/</loc>
+    <lastmod>2026-05-06T20:07:02+07:00</lastmod>
   </url><url>
     <loc>http://localhost:8080/posts/</loc>
     <lastmod>2026-05-06T00:00:00+00:00</lastmod>

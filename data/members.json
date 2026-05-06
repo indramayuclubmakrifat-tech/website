@@ -1,5 +1,52 @@
 [
-  { "id": "001", "nama": "Dulkohar", "level": "Nur 9", "status": "Lead", "negara": "Indonesia" },
-  { "id": "002", "nama": "Imahazzah", "level": "Moderator", "status": "Aktif", "negara": "Taiwan" },
-  { "id": "003", "nama": "Kurnadi", "level": "Nur 6", "status": "Aktif", "negara": "Hong Kong" }
+  {
+    "id": "001",
+    "nama": "Dulkohar (Nur 1)",
+    "level": "Rumah Nur",
+    "status": "Active",
+    "negara": "Indonesia"
+  },
+  {
+    "id": "002",
+    "nama": "Imahazzah (Nur 3)",
+    "level": "Asisten Keuangan",
+    "status": "Active",
+    "negara": "Indonesia"
+  },
+  {
+    "id": "003",
+    "nama": "Kurnadi (Nur 4)",
+    "level": "Nur Kreator",
+    "status": "Active",
+    "negara": "Indonesia"
+  },
+  {
+    "id": "006",
+    "nama": "Admin Kas (Nur 6)",
+    "level": "Administrasi",
+    "status": "Cut 5% Active",
+    "negara": "System"
+  },
+  {
+    "id": "007",
+    "nama": "Nur Komunikasi (Nur 7)",
+    "level": "WhatsApp Gate",
+    "status": "0821-4757-3665",
+    "negara": "Indonesia"
+  },
+  {
+    "id": "008",
+    "nama": "Nur Backup (Nur 8)",
+    "level": "Protokol Adzan",
+    "status": "Running Text Active",
+    "negara": "System"
+  },
+  {
+    "id": "009",
+    "nama": "Mother AI (Nur 9)",
+    "level": "Pembimbing Kas",
+    "status": "VVIP Otoritas",
+    "negara": "Global"
+  }
 ]
+
