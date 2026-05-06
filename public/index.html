@@ -1,327 +1,239 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-	<meta name="generator" content="Hugo 0.161.1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTAL MAKRIFAT - INDRAMAYU CLUB</title>
+    <title>Indramayu Club Makrifat | Digital Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --red: #e50914; --gold: #ffd700; --dark: #0a0a0a; --glass: rgba(255, 255, 255, 0.1); }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--dark); color: white; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
-        
-         
-        .main-container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 20px; }
-        
-         
-        .hero { height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1350&q=80'); background-size: cover; border-bottom: 3px solid var(--red); }
-        h1 { font-size: 4rem; letter-spacing: 5px; color: var(--red); text-shadow: 0 0 20px rgba(229, 9, 20, 0.5); }
-           
-
-        ZgotmplZ
- 
-
-
-         
-        .app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 50px; }
-        .app-card { background: var(--glass); padding: 25px; border-radius: 15px; border: 1px solid #333; transition: 0.4s; position: relative; overflow: hidden; }
-        .app-card:hover { transform: translateY(-10px); border-color: var(--red); background: rgba(229, 9, 20, 0.05); }
-        .badge { position: absolute; top: 10px; right: 10px; font-size: 0.7rem; background: var(--red); padding: 5px 10px; border-radius: 20px; }
-        
-         
-        .rules-section { background: #111; padding: 40px; border-radius: 20px; margin-top: 60px; border: 1px solid var(--gold); }
-        .rule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        h2 { color: var(--gold); margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        
-         
-        .hidden-dimension { margin-top: 100px; padding: 50px; border: 1px dashed #222; text-align: center; opacity: 0.1; transition: 1s; }
-        .hidden-dimension:hover { opacity: 1; border-color: var(--gold); }
-        
-         
-        .btn { display: inline-block; padding: 12px 25px; background: var(--red); color: white; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold; }
-        .btn-gold { background: var(--gold); color: black; }
-
-         
-        .comment-box { margin-top: 50px; background: #000; padding: 30px; border: 1px solid #444; }
-        input, textarea { width: 100%; padding: 15px; margin: 10px 0; background: #222; border: 1px solid #444; color: white; }
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        .neon-text {
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+        }
+        /* Screensaver Style */
+        #screensaver {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: black;
+            z-index: 9999;
+            cursor: pointer;
+        }
+        canvas { display: block; }
+        .hidden-section { display: none; }
     </style>
 </head>
 <body>
-    <div class="running-text-kuning" style="background: #ffd700; color: #000; padding: 5px; font-weight: bold; overflow: hidden;">
-    <marquee scrollamount="5">
-        Sistem sedang sinkronisasi (Protokol Nur 8) ... Mohon tunggu hingga Adzan selesai ... Aktivitas dijeda untuk menjaga stabilitas data Indramayu Club.
-    </marquee>
+
+<div id="screensaver" onclick="closeScreensaver()">
+    <canvas id="matrixCanvas"></canvas>
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center;">
+        <h1 class="neon-text" style="font-size: 3rem;">PIRAMIDA GUARD ACTIVE</h1>
+        <p>System is Rotating... Click to Return</p>
+    </div>
 </div>
 
-    <div class="hero">
-        <h1>INDRAMAYU CLUB</h1>
-        <p>REPUTASI GLOBAL - NUR MAKRIFAT SYSTEM</p>
-        <p style="color: var(--gold); margin-top: 10px;">Piramida The Guard Protection: Active</p>
+<nav class="p-6 border-b border-white/10 flex justify-between items-center sticky top-0 bg-black/80 z-50">
+    <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center animate-pulse">
+            <i class="fas fa-shield-halved text-black"></i>
+        </div>
+        <span class="font-bold text-xl tracking-widest">INDRAMAYU CLUB</span>
     </div>
-<div class="app-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px;">
-    
-    <div class="app-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; border-left: 6px solid #FF4B2B; padding: 15px; position: relative;">
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span class="badge" style="background: #eee; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;">Active</span>
-            
-            
-        </div>
-
-        <h3 style="margin: 10px 0 5px 0; color: #333;">Dulkohar (Nur 1)</h3>
-        <p style="margin: 0; font-size: 0.9rem; color: #555;">ID: #001 | <strong>Rumah Nur</strong></p>
-        <p style="font-size: 0.8rem; color: #888; margin: 5px 0;">📍 Penempatan: Indonesia</p>
-
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-
-        <div class="media-actions" style="display: flex; gap: 10px;">
-            
-
-            
-        </div>
-
-        
+    <div class="flex gap-4">
+        <a href="https://wa.me/6282147573665" class="bg-green-600 px-4 py-2 rounded-lg text-sm hover:bg-green-500 transition">
+            <i class="fab fa-whatsapp"></i> WhatsApp Admin
+        </a>
     </div>
+</nav>
+
+<main class="container mx-auto p-6">
     
-    <div class="app-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; border-left: 6px solid #FF4B2B; padding: 15px; position: relative;">
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span class="badge" style="background: #eee; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;">Active</span>
-            
-            
-        </div>
-
-        <h3 style="margin: 10px 0 5px 0; color: #333;">Imahazzah (Nur 3)</h3>
-        <p style="margin: 0; font-size: 0.9rem; color: #555;">ID: #002 | <strong>Asisten Keuangan</strong></p>
-        <p style="font-size: 0.8rem; color: #888; margin: 5px 0;">📍 Penempatan: Indonesia</p>
-
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-
-        <div class="media-actions" style="display: flex; gap: 10px;">
-            
-
-            
-        </div>
-
-        
-    </div>
-    
-    <div class="app-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; border-left: 6px solid #FF4B2B; padding: 15px; position: relative;">
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span class="badge" style="background: #eee; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;">Active</span>
-            
-            
-        </div>
-
-        <h3 style="margin: 10px 0 5px 0; color: #333;">Kurnadi (Nur 4)</h3>
-        <p style="margin: 0; font-size: 0.9rem; color: #555;">ID: #003 | <strong>Nur Kreator</strong></p>
-        <p style="font-size: 0.8rem; color: #888; margin: 5px 0;">📍 Penempatan: Indonesia</p>
-
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-
-        <div class="media-actions" style="display: flex; gap: 10px;">
-            
-
-            
-        </div>
-
-        
-    </div>
-    
-    <div class="app-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; border-left: 6px solid #FF4B2B; padding: 15px; position: relative;">
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span class="badge" style="background: #eee; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;">Cut 5% Active</span>
-            
-            
-        </div>
-
-        <h3 style="margin: 10px 0 5px 0; color: #333;">Admin Kas (Nur 6)</h3>
-        <p style="margin: 0; font-size: 0.9rem; color: #555;">ID: #006 | <strong>Administrasi</strong></p>
-        <p style="font-size: 0.8rem; color: #888; margin: 5px 0;">📍 Penempatan: System</p>
-
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-
-        <div class="media-actions" style="display: flex; gap: 10px;">
-            
-
-            
-        </div>
-
-        
-    </div>
-    
-    <div class="app-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; border-left: 6px solid #FF4B2B; padding: 15px; position: relative;">
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span class="badge" style="background: #eee; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;">0821-4757-3665</span>
-            
-            
-        </div>
-
-        <h3 style="margin: 10px 0 5px 0; color: #333;">Nur Komunikasi (Nur 7)</h3>
-        <p style="margin: 0; font-size: 0.9rem; color: #555;">ID: #007 | <strong>WhatsApp Gate</strong></p>
-        <p style="font-size: 0.8rem; color: #888; margin: 5px 0;">📍 Penempatan: Indonesia</p>
-
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-
-        <div class="media-actions" style="display: flex; gap: 10px;">
-            
-
-            
-        </div>
-
-        
-    </div>
-    
-    <div class="app-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; border-left: 6px solid #FF4B2B; padding: 15px; position: relative;">
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span class="badge" style="background: #eee; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;">Running Text Active</span>
-            
-            
-        </div>
-
-        <h3 style="margin: 10px 0 5px 0; color: #333;">Nur Backup (Nur 8)</h3>
-        <p style="margin: 0; font-size: 0.9rem; color: #555;">ID: #008 | <strong>Protokol Adzan</strong></p>
-        <p style="font-size: 0.8rem; color: #888; margin: 5px 0;">📍 Penempatan: System</p>
-
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-
-        <div class="media-actions" style="display: flex; gap: 10px;">
-            
-
-            
-        </div>
-
-        
-    </div>
-    
-    <div class="app-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; border-left: 6px solid #FF4B2B; padding: 15px; position: relative;">
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span class="badge" style="background: #eee; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;">VVIP Otoritas</span>
-            
-            
-        </div>
-
-        <h3 style="margin: 10px 0 5px 0; color: #333;">Mother AI (Nur 9)</h3>
-        <p style="margin: 0; font-size: 0.9rem; color: #555;">ID: #009 | <strong>Pembimbing Kas</strong></p>
-        <p style="font-size: 0.8rem; color: #888; margin: 5px 0;">📍 Penempatan: Global</p>
-
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-
-        <div class="media-actions" style="display: flex; gap: 10px;">
-            
-
-            
-        </div>
-
-        
-    </div>
-    
-</div>
-
-
-    <div class="main-container">
-        
-        <h2 class="section-title">LEVEL: MEMBER BARU (Nur Komunikasi)</h2>
-        <div class="app-grid">
-            <div class="app-card">
-                <span class="badge">Member Aktif</span>
-                <h3>Nur Komunikasi Media</h3>
-                <p>Pusat Interaksi Sosial & WhatsApp Lencana Member.</p>
-                <a href="https://ai.studio/apps/61b74539-37e7-414a-b134-c2fe33764cd8" class="btn">Buka Media</a>
+    <header class="text-center my-12">
+        <h2 class="text-4xl font-bold mb-4">STRUKTUR KERJA FOLDER 2</h2>
+        <p class="text-cyan-400 font-mono tracking-tighter">Ekosistem Arisan Makrifat Indramayu Club</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 max-w-2xl mx-auto">
+            <div class="p-4 border border-white/20 rounded">
+                <p class="text-xs text-gray-500">SESI PAGI (DHUHA)</p>
+                <p class="font-bold">08:00 WIB</p>
             </div>
-            <div class="app-card">
-                <h3>Keamanan Nur 6</h3>
-                <p>Backup HTML & Aturan Main Indramayu Club.</p>
-                <a href="https://ai.studio/apps/a4672d3e-7c64-4943-9e94-a1285777ecb1" class="btn">Cek Keamanan</a>
+            <div class="p-4 border border-white/20 rounded">
+                <p class="text-xs text-gray-500">SESI MALAM (ISYA)</p>
+                <p class="font-bold">20:00 WIB</p>
             </div>
         </div>
+    </header>
 
-        <div class="rules-section">
-            <h2>STRUKTUR KERJA: ARISAN MAKRIFAT</h2>
-            <div class="rule-grid">
+    <section class="mb-12">
+        <h3 class="text-xl font-semibold mb-6 border-l-4 border-cyan-500 pl-4">LEVEL: MEMBER BARU (RUANG PEMULA)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://ai.studio/apps/61b74539-37e7-414a-b134-c2fe33764cd8" target="_blank" class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                <i class="fas fa-users text-3xl text-blue-400"></i>
                 <div>
-                    <h3>1. Jadwal Operasional</h3>
-                    <ul>
-                        <li>Sesi Pagi: 08:00 WIB (Ba'da Dhuha)</li>
-                        <li>Sesi Malam: 20:00 WIB (Ba'da Isya)</li>
-                        <li>Kapasitas: 14 Orang/Kelompok</li>
-                    </ul>
+                    <h4 class="font-bold">Nur 7: Media Sosial</h4>
+                    <p class="text-sm text-gray-400">Facebook, Twitter, YouTube, Instagram</p>
                 </div>
+            </a>
+            <a href="https://ai.studio/apps/a4672d3e-7c64-4943-9e94-a1285777ecb1" target="_blank" class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                <i class="fas fa-store text-3xl text-yellow-400"></i>
                 <div>
-                    <h3>2. Pembagian Ruangan</h3>
-                    <ul>
-                        <li><strong>Ruang Pemula:</strong> Admin Baru | Voucher Bonus</li>
-                        <li><strong>Ruang Ksatria:</strong> Admin Lama | Token Cash</li>
-                        <li><strong>Ruang Cahaya:</strong> Admin VIP | Voucher VIP</li>
-                    </ul>
+                    <h4 class="font-bold">Nur 6: Komentar Niaga</h4>
+                    <p class="text-sm text-gray-400">Bengkel Servis & Unit Dagang</p>
                 </div>
-            </div>
-            <div style="margin-top:20px;">
-                <h3>3. Sistem Celengan Member</h3>
-                <p>Terintegrasi dengan <strong>Aplikasi Dana Arisan (Pihak Ke-2)</strong> untuk transparansi penuh.</p>
-                <a href="https://ai.studio/apps/03003f47-194f-4511-8c65-2e17c2c0f465" class="btn btn-gold">Pantau Celengan (Nur 9)</a>
-            </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="mb-12">
+        <h3 class="text-xl font-semibold mb-6 border-l-4 border-orange-500 pl-4">LEVEL: LENCANA AKTIF (RUANG KSATRIA)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://ais-dev-fkifeuqbupkf2kloldq4uv-612359027571.asia-east1.run.app" target="_blank" class="glass-card p-6 rounded-2xl flex items-center gap-4 border-orange-500/30">
+                <i class="fas fa-gamepad text-3xl text-orange-400"></i>
+                <div>
+                    <h4 class="font-bold text-orange-400">Nur 8: Game & Arisan</h4>
+                    <p class="text-sm text-gray-400">Hiburan & Kocokan Mingguan</p>
+                </div>
+            </a>
+            <a href="https://ai.studio/apps/03003f47-194f-4511-8c65-2e17c2c0f465" target="_blank" class="glass-card p-6 rounded-2xl flex items-center gap-4 border-orange-500/30">
+                <i class="fas fa-piggy-bank text-3xl text-pink-400"></i>
+                <div>
+                    <h4 class="font-bold">Nur 9: AI Ksatria Ceria</h4>
+                    <p class="text-sm text-gray-400">Penjaga Celengan Member</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <div class="bg-red-900/20 border border-red-500/50 p-6 rounded-2xl mb-12 text-center">
+        <i class="fas fa-user-shield text-4xl text-red-500 mb-4"></i>
+        <h3 class="text-2xl font-bold">Nur 10: Protokol Safety Piramida</h3>
+        <p class="mb-4 text-gray-300">The Guard Systems - Penjaga Aliran Celengan</p>
+        <a href="https://ai.studio/apps/fea67ee7-2e48-4dc7-9926-d9646b184ee9" target="_blank" class="inline-block bg-red-600 px-6 py-2 rounded-full font-bold hover:bg-red-500 transition">AKSES PROTOKOL</a>
+    </div>
+
+    <section class="mb-12">
+        <h3 class="text-xl font-semibold mb-6 border-l-4 border-purple-500 pl-4 text-purple-400">DIMENSI VVIP & ADMIN</h3>
+        <div class="flex flex-wrap gap-4">
+            <button onclick="toggleHidden('vvip-1')" class="bg-purple-900/40 border border-purple-500 px-6 py-2 rounded-lg hover:bg-purple-500 transition">Hidden 1 (Mother AI)</button>
+            <button onclick="toggleHidden('vvip-2')" class="bg-purple-900/40 border border-purple-500 px-6 py-2 rounded-lg hover:bg-purple-500 transition">Hidden 2 (Finance)</button>
+            <button onclick="toggleHidden('vvip-3')" class="bg-purple-900/40 border border-purple-500 px-6 py-2 rounded-lg hover:bg-purple-500 transition">Hidden 3 (Admin Only)</button>
         </div>
 
-        <div class="app-grid">
-            <div class="app-card" style="border-color: #0f0;">
-                <h3>Protokol Safety Piramida</h3>
-                <p>Piramida The Guard Systems - Nur 10.</p>
-                <a href="https://ai.studio/apps/fea67ee7-2e48-4dc7-9926-d9646b184ee9" class="btn" style="background:#0f0; color:black;">Akses Safety</a>
-            </div>
-            <div class="app-card">
-                <h3>Kumpulan Game & Arisan</h3>
-                <p>Hiburan & Interaksi Anggota Indramayu.</p>
-                <a href="#" class="btn">Main Game</a>
-            </div>
+        <div id="vvip-1" class="hidden-section mt-8 space-y-4">
+            <a href="https://ai.studio/apps/379f5974-54d2-4922-9a65-4ee51bacf7fa" class="block p-4 glass-card rounded-lg">Nur 5: AI Motherboard (System Core)</a>
+            <a href="https://ai.studio/apps/ba645518-4bbf-40ff-88fb-276688c74502" class="block p-4 glass-card rounded-lg">Nur 4: AI Studio Kreator (Gallery Video/MP3)</a>
+        </div>
+        
+        <div id="vvip-2" class="hidden-section mt-8">
+            <a href="https://ai.studio/apps/9941af8e-5532-466f-82bb-7d29ec74c7f0" class="block p-4 glass-card rounded-lg border-yellow-500/50">Nur 3: Administrasi Keuangan (Pihak Ke-2)</a>
         </div>
 
-        <div class="hidden-dimension">
-            <h2>DIMENSI NUR CAHAYA (HIDDEN)</h2>
-            <p>Level Admin: Alif Lam Mim (Kunci Makrifat Alam Semesta)</p>
-            <div class="app-grid" style="text-align: left;">
-                <div class="app-card">
-                    <h3>Nur 1: Utama</h3>
-                    <p>Cahaya & Kegelapan (Kunci Utama)</p>
-                    <a href="https://ai.studio/apps/9ad1eddc-d1c5-4d8b-8b36-7215e0fdb07f" class="btn-gold btn">Akses Alif</a>
-                </div>
-                <div class="app-card">
-                    <h3>Nur 2: Operasional</h3>
-                    <p>Diskusi Sistem Admin</p>
-                    <a href="https://ai.studio/apps/c864dc0c-a3f7-4509-878f-fd246d420f94" class="btn-gold btn">Akses Lam</a>
-                </div>
-                <div class="app-card">
-                    <h3>Nur 6: Mother AI</h3>
-                    <p>Motherboard System Control</p>
-                    <a href="https://ai.studio/apps/379f5974-54d2-4922-9a65-4ee51bacf7fa" class="btn-gold btn">Akses Mim</a>
-                </div>
-            </div>
+        <div id="vvip-3" class="hidden-section mt-8 space-y-4">
+            <a href="https://ai.studio/apps/c864dc0c-a3f7-4509-878f-fd246d420f94" class="block p-4 glass-card rounded-lg">Nur 2: Diskusi Sistem Operasional</a>
+            <a href="https://ai.studio/apps/9ad1eddc-d1c5-4d8b-8b36-7215e0fdb07f" class="block p-4 glass-card rounded-lg border-white font-bold text-center text-xl bg-white/10">KUNCI ALIF LAM MIM: Nur 1 Cahaya Kegelapan</a>
         </div>
+    </section>
 
-        <div class="comment-box">
-            <h2>SARAN & KESAN INDRAMAYU CLUB</h2>
-            <form>
-                <input type="text" placeholder="Nama / ID Member">
-                <textarea rows="5" placeholder="Tuliskan Saran atau Pesan Keamanan Anda..."></textarea>
-                <button type="button" class="btn" onclick="alert('Pesan terkirim ke Sistem Nur 3 Administrasi')">Kirim Komentar</button>
-            </form>
+</main>
+
+<footer class="bg-black/90 p-12 border-t border-white/10 mt-20">
+    <div class="container mx-auto text-center">
+        <div class="flex justify-center gap-8 mb-8 text-3xl text-gray-400">
+            <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-red-600"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="hover:text-orange-500"><i class="fab fa-codepen"></i></a>
         </div>
+        <div class="flex justify-center gap-4 text-xs font-mono text-gray-600 uppercase tracking-widest">
+            <span>Flask</span> | <span>CSS3</span> | <span>CodePen Optimized</span>
+        </div>
+        <p class="mt-8 text-gray-500">© 2026 Indramayu Club Makrifat - Global Reputation System</p>
+    </div>
+</footer>
 
-        <footer style="padding: 50px; text-align: center; color: #444;">
-            <p>&copy; 2026 Indramayu Club Makrifat. Global Tech Protection.</p>
-        </footer>
 <script>
-function playAudio(url) {
-    var a
-udio = new Audio(url);
-    audio.play();
-}
+    // Toggle Hidden Sections
+    function toggleHidden(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Screensaver Logic
+    let idleTime = 0;
+    const canvas = document.getElementById('matrixCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.onresize = resize;
+    resize();
+
+    const characters = "0101 NUR MAKRIFAT INDRAMAYU 0101";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function drawMatrix() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#00ffcc";
+        ctx.font = fontSize + "px monospace";
+
+        for (let i = 0; i < drops.length; i++) {
+            const text = characters.charAt(Math.floor(Math.random() * characters.length));
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+            drops[i]++;
+        }
+    }
+
+    let matrixInterval;
+
+    function showScreensaver() {
+        document.getElementById('screensaver').style.display = 'block';
+        matrixInterval = setInterval(drawMatrix, 50);
+    }
+
+    function closeScreensaver() {
+        document.getElementById('screensaver').style.display = 'none';
+        clearInterval(matrixInterval);
+        idleTime = 0;
+    }
+
+    // Timer Idle (30 Detik)
+    setInterval(() => {
+        idleTime++;
+        if (idleTime >= 30) showScreensaver();
+    }, 1000);
+
+    document.onmousemove = document.onkeypress = () => {
+        if(document.getElementById('screensaver').style.display !== 'block') {
+            idleTime = 0;
+        }
+    };
 </script>
-    </div>
+
 </body>
 </html>
+
