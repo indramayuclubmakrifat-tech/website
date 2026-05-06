@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDRAMAYU CLUB - Reputasi Global</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #ff0000;
+            margin-bottom: 5px;
+        }
+        .status {
+            color: #ffd700;
+            font-size: 0.9em;
+        }
+        .section {
+            border: 1px solid #333;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .level-tag {
+            background-color: #ffd700;
+            color: #000;
+            padding: 5px 10px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .btn {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>INDRAMAYU CLUB</h1>
+        <p>REPUTASI GLOBAL - NUR MAKRIFAT SYSTEM</p>
+        <p class="status">Piramida The Guard Protection: Active</p>
+    </div>
+
+    <div class="section">
+        <div class="level-tag">LEVEL: MEMBER BARU (Nur Komunikasi)</div>
+        <div class="grid">
+            <div>
+                <h3>Nur Komunikasi Media</h3>
+                <p>Pusat Interaksi Sosial & WhatsApp Lencana Member.</p>
+                <a href="https://ai.studio/apps/61b74539-37e7-414a-b134-c2fe33764cd8" class="btn">Buka Media</a>
+            </div>
+            <div>
+                <h3>Keamanan Nur 6</h3>
+                <p>Backup HTML & Aturan Main Indramayu Club.</p>
+                <a href="https://ai.studio/apps/a4672d3e-7c64-4943-9e94-a1285777ecb1" class="btn">Cek Keamanan</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>STRUKTUR KERJA: ARISAN MAKRIFAT</h2>
+        <ul>
+            <li><strong>Sesi Pagi:</strong> 08:00 WIB (Ba'da Dhuha)</li>
+            <li><strong>Sesi Malam:</strong> 20:00 WIB (Ba'da Isya)</li>
+            <li><strong>Kapasitas:</strong> 14 Orang/Kelompok</li>
+        </ul>
+        <a href="https://ai.studio/apps/03003f47-194f-4511-8c65-2e17c2c0f465" class="btn" style="background-color: #ffd700; color: #000;">Pantau Celengan (Nur 9)</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; font-size: 0.8em; color: #666;">
+        <p>© 2026 Indramayu Club Makrifat. Global Tech Protection.</p>
+    </div>
+
+</body>
+</html>
