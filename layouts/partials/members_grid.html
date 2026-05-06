@@ -1,0 +1,10 @@
+<div class="app-grid">
+    {{ range .Site.Data.members }}
+    <div class="app-card" style="border-left: 5px solid {{ if eq .level "Nur 9" }}#ffd700{{ else }}#e50914{{ end }};">
+        <span class="badge" style="background: {{ if eq .level "Nur 9" }}#ffd700{{ else }}#e50914{{ end }}; color: {{ if eq .level "Nur 9" }}black{{ else }}white{{ end }};">{{ .status }}</span>
+        <h3>{{ .nama }}</h3>
+        <p>ID: #{{ .id }} | <strong>{{ .level }}</strong></p>
+        <p style="font-size: 0.8rem; color: #888;">Penempatan: {{ .negara }}</p>
+    </div>
+    {{ end }}
+</div>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Project</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Project</description>
+    <title>INDRAMAYU CLUB</title>
+    <link>http://localhost:8080/</link>
+    <description>Recent content on INDRAMAYU CLUB</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>id</language>
     <lastBuildDate>Wed, 06 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:8080/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proyek Video Makrifat 01</title>
-      <link>http://localhost:1313/posts/pengolahan-video-01/</link>
+      <link>http://localhost:8080/posts/pengolahan-video-01/</link>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/pengolahan-video-01/</guid>
+      <guid>http://localhost:8080/posts/pengolahan-video-01/</guid>
       <description>&lt;p&gt;Proses pengolahan video menggunakan FFmpeg Engine telah selesai.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sistem Otomasi Lab</title>
-      <link>http://localhost:1313/posts/sistem-otomasi/</link>
+      <link>http://localhost:8080/posts/sistem-otomasi/</link>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sistem-otomasi/</guid>
+      <guid>http://localhost:8080/posts/sistem-otomasi/</guid>
       <description>&lt;p&gt;Laporan harian sistem otomatisasi Indramayu Club.&lt;/p&gt;</description>
     </item>
   </channel>

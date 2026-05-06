@@ -1,3 +1,6 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'http://localhost:8080/'
+languageCode = 'id'
+title = 'INDRAMAYU CLUB'
+
+[params]
+    author = 'Nur Makrifat'

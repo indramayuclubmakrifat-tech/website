@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:8080/</loc>
     <lastmod>2026-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:8080/posts/</loc>
     <lastmod>2026-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/pengolahan-video-01/</loc>
+    <loc>http://localhost:8080/posts/pengolahan-video-01/</loc>
     <lastmod>2026-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sistem-otomasi/</loc>
+    <loc>http://localhost:8080/posts/sistem-otomasi/</loc>
     <lastmod>2026-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:8080/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:8080/tags/</loc>
   </url>
 </urlset>
